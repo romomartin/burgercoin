@@ -1,7 +1,7 @@
 const burgerPriceSat = 84202
 const burgerPriceBtc = 0.00000001 * burgerPriceSat
 let eurRate = 0
-const apiUrl = "https://api.coinlayer.com/live?target=EUR&access_key=c350491d16b47398ec198ceb1f7505b2";
+const apiUrl = "http://localhost:5000/price";
 
 getStylePropPixels = (pixelString)=>{
     return Number(pixelString.substring(0,pixelString.length - 2))
@@ -46,7 +46,7 @@ fetch(apiUrl)
         return response.json(); 
     })
     .then(data => {
-        eurRate = data.rates.BTC
+        eurRate = data.eurRate;
         document.getElementById('price-euros').innerHTML = `= ${(eurRate * burgerPriceBtc).toFixed(2)} €`;
     })
     .catch(error => {
