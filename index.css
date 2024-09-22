@@ -61,7 +61,7 @@
 }
 .btc{
     width: 70%;
-    padding-top: .5em;
+    margin-top: .5em;
     animation: rotateCounterClockwise 3s linear infinite;
 }
 
