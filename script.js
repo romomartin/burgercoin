@@ -27,13 +27,6 @@ const btcIconHeight =
 
 const btcAnimationStart = Math.ceil(bgColumnHeight%btcIconHeight)
 
-console.log(btcIconHeight)
-console.log(bgColumnHeight)
-console.log(burgerAnimationEnd)
-console.log(btcAnimationStart)
-
-
-
 let root = document.documentElement;
 root.style.setProperty('--burger-end-y', `-${burgerAnimationEnd}px`);
 root.style.setProperty('--btc-start-y', `-${btcAnimationStart}px`);
