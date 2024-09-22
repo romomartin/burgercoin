@@ -46,22 +46,28 @@
 .burger-container{
     height: 200vh;
     width: 100%;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     animation: moveVerticalDown 6s linear infinite;
 }
+img { float: top; }
 .burger{
     width: 80%;
+    margin-top: .5em;
     animation: rotateClockwise 3s linear infinite;
 }
 .btc-container{
     height: 200vh;
     width: 100%;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     animation: moveVerticalUp 6s linear infinite;
 }
 .btc{
     width: 70%;
-    margin-top: .5em;
+    margin-top: 1em;
     animation: rotateCounterClockwise 3s linear infinite;
 }
 
@@ -70,12 +76,12 @@
         transform: translateY(-100vh);
     }
     100% {
-        transform: translateY(0); 
+        transform: translateY(var(--burger-end-y)); 
     }
 }
 @keyframes moveVerticalUp {
     0% {
-        transform: translateY(0);
+        transform: translateY(var(--btc-start-y));
     }
     100% {
         transform: translateY(-100vh); 
